@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace ProductView.Model
 {
+
+    [Serializable]
     public class Gender
     {
         private string _gendertype { get; }
@@ -15,5 +17,9 @@ namespace ProductView.Model
             _gendertype = gender;
         }
 
+        public override string ToString()
+        {
+            return $"{_gendertype}";
+        }
     }
 }
