@@ -57,7 +57,7 @@ namespace ProductView.IOController
                 gender = User.Female;
             }
             else gender = User.Male;
-            var user = new User(name = "unknown", nick = "unknown", birth = DateTime.Parse("01.01.2001"), weigth=20, gender= User.Female);
+            var user = new User(name, nick, birth, weigth, gender);
             SaveUserData();
             return user;
         }
