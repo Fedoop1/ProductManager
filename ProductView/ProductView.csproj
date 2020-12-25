@@ -61,7 +61,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IOController\BaseSerialize.cs" />
+    <Compile Include="IOController\EatingControl.cs" />
     <Compile Include="IOController\IOUserControl.cs" />
+    <Compile Include="Model\Eating.cs" />
+    <Compile Include="Model\Food.cs" />
     <Compile Include="Model\Gender.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Program.cs" />

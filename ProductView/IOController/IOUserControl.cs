@@ -10,7 +10,7 @@ using ProductView.Model;
 
 namespace ProductView.IOController
 {
-    public class IOUserControl
+    public class IOUserControl : BaseSerialize
     {
         private readonly string PATH;
 
@@ -72,32 +72,11 @@ namespace ProductView.IOController
 
         public void SaveUserData()
         {
-            {
-                using (var file = new FileStream(PATH,FileMode.OpenOrCreate))
-                {
-                    var formatter = new BinaryFormatter();
-                    formatter.Serialize(file, UserList); ;
-                    Console.WriteLine("Профиль успешно сохранён.");
-                }
-            }
-
+            SaveData(PATH, UserList);
         }
         public List<User> LoadUserData()
         {
-            if(!File.Exists(PATH))
-            {
-                Console.WriteLine("Ошибка, файл с учётными записями не найден!");
-                return new List<User>();
-            }
-
-            using (var file = new FileStream(PATH,FileMode.OpenOrCreate))
-            {
-
-                var formatter = new BinaryFormatter();
-                Console.WriteLine("Список пользователей успешно загружен.");
-                return formatter.Deserialize(file) as List<User>;
-            }
-
+            return LoadData<User>(PATH) ?? new List<User>();
         }
     
     }
