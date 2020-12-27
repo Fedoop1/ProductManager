@@ -17,25 +17,22 @@ namespace ProductView.IOController
                 {
                     var formatter = new BinaryFormatter();
                     formatter.Serialize(file, data);
-                    Console.WriteLine("Данные успешно сохранены.");
                 }
             }
 
         }
 
-        protected List<T> LoadData<T>(string path)
+        protected T LoadData<T>(string path)
         {
-            if (!File.Exists(path))
-            {
-                Console.WriteLine("Ошибка, файл с данными не найден!");
-                return default(List<T>);
-            }
+            var formatter = new BinaryFormatter();
 
             using (var file = new FileStream(path, FileMode.OpenOrCreate))
             {
-                var formatter = new BinaryFormatter();
-                Console.WriteLine("Данные успешно загружены");
-                return formatter.Deserialize(file) as List<T>;
+                if (file.Length > 0 && formatter.Deserialize(file) is T items)
+                {
+                    return items;
+                }
+                else return default(T);
             }
         }
 

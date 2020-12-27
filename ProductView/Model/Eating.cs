@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ProductView.Model
 {
-    class Eating
+    [Serializable]
+    public class Eating
     {
         public DateTime Moment { get; } = DateTime.UtcNow;
 
@@ -32,6 +33,11 @@ namespace ProductView.Model
             {
                 FoodList[check] += Weight;    
             }
+        }
+
+        public override string ToString()
+        {
+            return $"Пользователь: {CurrUser}.\nВремя приёма пиши: {Moment}.\nСписок продуктов{FoodList.Keys}.\nКоличество грамм: {FoodList.Values.Sum()}.";
         }
     }
 }

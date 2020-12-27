@@ -10,23 +10,23 @@ using ProductView.Model;
 
 namespace ProductView.IOController
 {
+    [Serializable]
     public class IOUserControl : BaseSerialize
     {
-        private readonly string PATH;
+        private const string PATH ="UserData.dat";
 
         public User CurrentUser;
 
         public bool NewUser { get; }
 
         private List<User> UserList;
-        public IOUserControl(string path, string UserName)
+        public IOUserControl(string UserName)
         {
-            PATH = path;
             UserList = LoadUserData();
             CurrentUser = UserList.SingleOrDefault(u => u._nickname == UserName);
             if(CurrentUser == null)
             {
-                Console.WriteLine("Пользователь с текущим логином не найден!");
+                Console.WriteLine("Пользователь с текущим именем не найден!");
                 CurrentUser = this.UserCreate();
                 UserList.Add(CurrentUser);
                 SaveUserData();
@@ -76,7 +76,7 @@ namespace ProductView.IOController
         }
         public List<User> LoadUserData()
         {
-            return LoadData<User>(PATH) ?? new List<User>();
+            return LoadData<List<User>>(PATH) ?? new List<User>();
         }
     
     }

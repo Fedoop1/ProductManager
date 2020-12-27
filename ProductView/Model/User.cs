@@ -13,19 +13,22 @@ namespace ProductView.Model
         public static Gender Male = new Gender("Male");
         public static Gender Female = new Gender("Female");
 
-        public string _name { get; } = "Unknown";
-        public string _nickname { get; } = "Unknown";
-        private DateTime _birthdate { get; } = DateTime.Parse("01.01.2000");
-        private double _weigth { get; } = 21;
-        private Gender _gender { get; } = new Gender("Unknown");
+        public string _name { get; }
+        public string _nickname { get; } 
+        private DateTime _birthdate { get; }
+        private double _weigth { get; }
+        private Gender _gender { get; }
 
-        public User() { }
+        public User(string name) : this(name: name, nick: "null", birth: DateTime.Parse("01.01.2001"), weigth: 999, gender: User.Male)
+        {
+            _name = name;
+        }
 
         public User(string name, string nick, DateTime birth, double weigth, Gender gender)
         {
             if (string.IsNullOrWhiteSpace(name)) throw new ArgumentNullException("Name exception");
             if (string.IsNullOrWhiteSpace(nick)) throw new ArgumentNullException("Nick exception");
-            if (DateTime.Now < birth || birth < DateTime.Parse("1.12.1950")) throw new ArgumentException("Birth exception");
+            if (DateTime.Now < birth || birth < DateTime.Parse("1.9.1939")) throw new ArgumentException("Birth exception");
             if (weigth < 20) throw new ArgumentException("Weigth exception");
             if (gender == null) throw new ArgumentNullException("Gender exception");
             _name = name;
