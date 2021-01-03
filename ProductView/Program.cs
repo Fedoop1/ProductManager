@@ -47,16 +47,19 @@ namespace ProductView
             Console.WriteLine(resManager.GetString("\nCulture-successfull-update", Culture));
             Console.WriteLine(resManager.GetString("Enter_nickname", Culture));
             string Login = Console.ReadLine();
+
             var ioUserControl = new IOUserControl(Login);
-            EatingControl eatingControl = new EatingControl(ioUserControl.CurrentUser);
+            EatingControl eatingControl = new EatingControl(ioUserControl.CurrentUser);                 //Model Creating
+            ExcersiseControl excersiseControl = new ExcersiseControl(ioUserControl.CurrentUser);
+            
             Console.WriteLine();
             Console.WriteLine(resManager.GetString("Autorization", Culture));
             Console.WriteLine(ioUserControl.CurrentUser);
             Console.WriteLine(resManager.GetString("Any_key_to_cont", Culture));
             Console.ReadKey();
-
+            Console.WriteLine(resManager.GetString("ChoseAction", Culture));
             Console.WriteLine(resManager.GetString("add_eating", Culture));
-            Console.WriteLine();
+            Console.WriteLine(resManager.GetString("AddExcersise", Culture));
             var input = Console.ReadLine();
             while(true)
             if (input == "/add")
@@ -85,10 +88,16 @@ namespace ProductView
                 }
                 break;
             }
+            else if(input == "/act")
+            {
+                var activity = ActivityAdd();
+                excersiseControl.ExcerciseAdd(activity.activity, activity.begin, activity.end);
+                    break;
+            }
             else
             {
                 Console.WriteLine(resManager.GetString("Unknown_comand", Culture)); 
-                    input = Console.ReadLine();
+                input = Console.ReadLine();
             }
 
             (Food food, double weight) EatingAdd()
@@ -109,10 +118,35 @@ namespace ProductView
                 return result;
             }
 
+            DateTime ParseDataTime(string text)
+            {
+                Console.WriteLine($"Введите {text}: ");
+                var data = Console.ReadLine();
+                DateTime result;
+                DateTime.TryParse(data, out result);
+                return result;
+            }
+
+            (Activity activity, DateTime begin, DateTime end) ActivityAdd()
+            {
+                Console.WriteLine("Введите название активности: ");
+                string actname = Console.ReadLine();
+                DateTime begin = ParseDataTime("время начала тренировки");
+                DateTime end = ParseDataTime("время окончания тренировки");
+                double calories = ParseDouble("кол-во калорий в минуту");
+                Activity act = new Activity(actname, calories);
+
+                return (act, begin, end);
+
+            }
+
             eatingControl.FoodInList();
+            excersiseControl.ExcersiseInList();
 
             Console.ReadKey();
 
         }
+
+        
     }
 }

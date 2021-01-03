@@ -106,6 +106,15 @@ namespace ProductView.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на What do you want to do?.
+        /// </summary>
+        internal static string ChoseAction {
+            get {
+                return ResourceManager.GetString("ChoseAction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Culture successfull update!.
         /// </summary>
         internal static string Culture_successfull_update {
@@ -183,6 +192,15 @@ namespace ProductView.Languages {
         internal static string Unknown_comand {
             get {
                 return ResourceManager.GetString("Unknown_comand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на User not found..
+        /// </summary>
+        internal static string UserNotFound {
+            get {
+                return ResourceManager.GetString("UserNotFound", resourceCulture);
             }
         }
         

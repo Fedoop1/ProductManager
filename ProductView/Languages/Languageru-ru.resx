@@ -117,8 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AddExcersise" xml:space="preserve">
+    <value>/act для добавления новой активности.</value>
+  </data>
   <data name="add_eating" xml:space="preserve">
-    <value>/add для добавления нового приёма пищи</value>
+    <value>/add для добавления нового приёма пищи.</value>
   </data>
   <data name="Any_key_to_cont" xml:space="preserve">
     <value>Нажмите любую клавишу для продолжения...</value>
@@ -132,14 +135,17 @@
   <data name="Carbo_hydrates" xml:space="preserve">
     <value>Углеводы</value>
   </data>
+  <data name="ChoseAction" xml:space="preserve">
+    <value>Что вы хотите сделать?</value>
+  </data>
   <data name="Culture-successfull-update" xml:space="preserve">
     <value>Культура успешно изменена!</value>
   </data>
-  <data name="Enter product name" xml:space="preserve">
-    <value>Введите название продукта:</value>
-  </data>
   <data name="Enter_nickname" xml:space="preserve">
     <value>Введите ваш nickname:</value>
+  </data>
+  <data name="Enter_product_name" xml:space="preserve">
+    <value>Введите название продукта:</value>
   </data>
   <data name="Fats" xml:space="preserve">
     <value>Жиры</value>
@@ -158,6 +164,9 @@
   </data>
   <data name="Unknown_comand" xml:space="preserve">
     <value>Неизвестная команда, введите корректную команду: </value>
+  </data>
+  <data name="UserNotFound" xml:space="preserve">
+    <value>Пользователь не найден!</value>
   </data>
   <data name="Weigth_of_portion" xml:space="preserve">
     <value>Вес порции</value>

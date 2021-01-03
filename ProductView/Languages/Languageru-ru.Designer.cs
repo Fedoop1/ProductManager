@@ -61,11 +61,20 @@ namespace ProductView.Languages {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /add для добавления нового приёма пищи.
+        ///   Ищет локализованную строку, похожую на /add для добавления нового приёма пищи..
         /// </summary>
         internal static string add_eating {
             get {
                 return ResourceManager.GetString("add_eating", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на /act для добавления новой активности..
+        /// </summary>
+        internal static string AddExcersise {
+            get {
+                return ResourceManager.GetString("AddExcersise", resourceCulture);
             }
         }
         
@@ -106,6 +115,15 @@ namespace ProductView.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Что вы хотите сделать?.
+        /// </summary>
+        internal static string ChoseAction {
+            get {
+                return ResourceManager.GetString("ChoseAction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Культура успешно изменена!.
         /// </summary>
         internal static string Culture_successfull_update {
@@ -128,7 +146,7 @@ namespace ProductView.Languages {
         /// </summary>
         internal static string Enter_product_name {
             get {
-                return ResourceManager.GetString("Enter product name", resourceCulture);
+                return ResourceManager.GetString("Enter_product_name", resourceCulture);
             }
         }
         
@@ -183,6 +201,15 @@ namespace ProductView.Languages {
         internal static string Unknown_comand {
             get {
                 return ResourceManager.GetString("Unknown_comand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Пользователь не найден!.
+        /// </summary>
+        internal static string UserNotFound {
+            get {
+                return ResourceManager.GetString("UserNotFound", resourceCulture);
             }
         }
         

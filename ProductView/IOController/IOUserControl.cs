@@ -17,8 +17,6 @@ namespace ProductView.IOController
 
         public User CurrentUser;
 
-        public bool NewUser { get; }
-
         private List<User> UserList;
         public IOUserControl(string UserName)
         {
@@ -31,6 +29,12 @@ namespace ProductView.IOController
                 UserList.Add(CurrentUser);
                 SaveUserData();
             }
+        }
+
+        public IOUserControl(User user)
+        {
+            UserList = LoadUserData();
+            CurrentUser = user;
         }
 
         public User UserCreate()

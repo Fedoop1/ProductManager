@@ -132,6 +132,9 @@
   <data name="Carbo_hydrates" xml:space="preserve">
     <value>Carbo Hydrates</value>
   </data>
+  <data name="ChoseAction" xml:space="preserve">
+    <value>What do you want to do?</value>
+  </data>
   <data name="Culture-successfull-update" xml:space="preserve">
     <value>Culture successfull update!</value>
   </data>
@@ -158,6 +161,9 @@
   </data>
   <data name="Unknown_comand" xml:space="preserve">
     <value>Unknown command, please enter correct comand.</value>
+  </data>
+  <data name="UserNotFound" xml:space="preserve">
+    <value>User not found.</value>
   </data>
   <data name="Weigth_of_portion" xml:space="preserve">
     <value>Enter weigth of portion</value>

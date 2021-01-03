@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="IOController\BaseSerialize.cs" />
     <Compile Include="IOController\EatingControl.cs" />
+    <Compile Include="IOController\ExcersiseControl.cs" />
     <Compile Include="IOController\IOUserControl.cs" />
     <Compile Include="Languages\Languageen-us.Designer.cs">
       <DependentUpon>Languageen-us.resx</DependentUpon>
@@ -82,7 +83,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Languageru-ru.resx</DependentUpon>
     </Compile>
+    <Compile Include="Model\Activity.cs" />
     <Compile Include="Model\Eating.cs" />
+    <Compile Include="Model\Excercise.cs" />
     <Compile Include="Model\Food.cs" />
     <Compile Include="Model\Gender.cs" />
     <Compile Include="Model\User.cs" />
