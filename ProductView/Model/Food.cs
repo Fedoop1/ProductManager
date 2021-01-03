@@ -34,7 +34,7 @@ namespace ProductView.Model
 
         public override string ToString()
         {
-            return $"Название продукта: {Name}.\nБелки: {Proteins}.\nЖиры: {Fats}.\nУглеводы: {CarboHydrates}.\nКалорийность: {Callories}.\n\n*Белки, жири, углеводы, калории в 1 грамме продукта";
+            return $"Название продукта: {Name}.\nБелки: {Proteins}.\nЖиры: {Fats}.\nУглеводы: {CarboHydrates}.\nКалорийность: {Callories}.\n*Белки, жири, углеводы, калории в 1 грамме продукта";
         }
     }
 }
