@@ -10,19 +10,30 @@ namespace ProductView.Model
     [Serializable]
     public class Excercise
     {
-        public DateTime beginTime { get; }
-        public DateTime endTime { get; }
-        public Activity activity { get; }
+        public DateTime beginTime { get; set; }
+        public DateTime endTime { get; set; }
+
+        public int Id { get; set; }
+        public int UserId { get; set; }
+
+        public int ActivityId { get; set; }
+
+        public virtual User User { get; set; }
+
+        public virtual Activity Activity { get; set; }
         public Excercise(User user, DateTime begin, DateTime end, Activity act)
         {
             beginTime = begin;
             endTime = end;
-            activity = act ?? throw new Exception("Null activity!");
+            Activity = act ?? throw new Exception("Null activity!");
+            User = user;
         }
+
+        public Excercise() { }
 
         public override string ToString()
         {
-            return $"{activity.Name} с {beginTime.ToShortTimeString()} до {endTime.ToShortTimeString()}.\nКалорий в минуту: {activity.CaloriesPerMinute}.";
+            return $"{Activity.Name} с {beginTime.ToShortTimeString()} до {endTime.ToShortTimeString()}.\nКалорий в минуту: {Activity.CaloriesPerMinute}.";
         }
     }
 }

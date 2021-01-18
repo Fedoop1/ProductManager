@@ -9,6 +9,7 @@ namespace ProductView.Model
     [Serializable]
     public class Food
     {
+        
         public string Name { get; set; }
         public double Callories { get; set; }
 
@@ -18,10 +19,15 @@ namespace ProductView.Model
 
         public double Proteins { get; set; }
 
+        public int Id { get; set; }
+
         public Food(string name) : this(name, 0, 0, 0, 0) 
         {
             Name = name; 
         }
+
+        public virtual ICollection<Eating> Eatings { get; set; }
+        public Food() { }
 
         public Food(string name, double callories, double fats, double carbo, double proteins)
         {

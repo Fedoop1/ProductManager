@@ -9,15 +9,20 @@ namespace ProductView.Model
     [Serializable]
     public class Activity
     {
-        public string Name { get; }
+        public string Name { get; set; }
 
-        public double CaloriesPerMinute { get; }
+        public double CaloriesPerMinute { get; set; }
+        public virtual ICollection<Excercise> Excercises { get; set; }
+        public int Id { get; set; }
 
-        public Activity(string name, double  calories)
+        public Activity(string name, double calories)
         {
-            if(!string.IsNullOrWhiteSpace(name)) Name = name;
+            if (!string.IsNullOrWhiteSpace(name)) Name = name;
 
             CaloriesPerMinute = calories;
         }
+
+        
+        public Activity() { }
     }
 }

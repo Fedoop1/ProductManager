@@ -9,34 +9,20 @@ using System.Threading.Tasks;
 namespace ProductView.IOController
 {
    public abstract class BaseSerialize
-    {
-        protected void SaveData(string path, object data)
-        {
-            {
-                using (var file = new FileStream(path, FileMode.OpenOrCreate))
-                {
-                    var formatter = new BinaryFormatter();
-                    formatter.Serialize(file, data);
-                }
-            }
+   {
+        private readonly IDataSaver serializemanager = new SerilalizableSaver();
 
+        public List<T> Load<T>() where T : class
+        {
+            return serializemanager.Load<T>();
         }
 
-        protected T LoadData<T>(string path)
+        public void Save<T>(List<T> item) where T : class
         {
-            var formatter = new BinaryFormatter();
-
-            using (var file = new FileStream(path, FileMode.OpenOrCreate))
-            {
-                if (file.Length > 0 && formatter.Deserialize(file) is T items)
-                {
-                    return items;
-                }
-                else return default(T);
-            }
+            serializemanager.Save(item);
         }
 
-    }
+   }
 }
 
     

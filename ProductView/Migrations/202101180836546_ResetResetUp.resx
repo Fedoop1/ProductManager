@@ -117,61 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AddExcersise" xml:space="preserve">
-    <value>/act to add new Excercise</value>
+  <data name="Target" xml:space="preserve">
+    <value>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</value>
   </data>
-  <data name="add_eating" xml:space="preserve">
-    <value>/add to add new eating.</value>
-  </data>
-  <data name="Any_key_to_cont" xml:space="preserve">
-    <value>Press any key to continue...</value>
-  </data>
-  <data name="Autorization" xml:space="preserve">
-    <value>Authorization was successful.</value>
-  </data>
-  <data name="Calories" xml:space="preserve">
-    <value>Calories</value>
-  </data>
-  <data name="Carbo_hydrates" xml:space="preserve">
-    <value>Carbo Hydrates</value>
-  </data>
-  <data name="ChoseAction" xml:space="preserve">
-    <value>What do you want to do?</value>
-  </data>
-  <data name="Culture-successfull-update" xml:space="preserve">
-    <value>Culture successfull update!</value>
-  </data>
-  <data name="Enter_nickname" xml:space="preserve">
-    <value>Please, enter you nickname:</value>
-  </data>
-  <data name="Enter_product_name" xml:space="preserve">
-    <value>Enter product name: </value>
-  </data>
-  <data name="Exit" xml:space="preserve">
-    <value>/exit to close app.</value>
-  </data>
-  <data name="Fats" xml:space="preserve">
-    <value>Fats</value>
-  </data>
-  <data name="ProductNotFound" xml:space="preserve">
-    <value>Product not found.</value>
-  </data>
-  <data name="Product_add" xml:space="preserve">
-    <value>Product was found and added successfully!</value>
-  </data>
-  <data name="Proteins" xml:space="preserve">
-    <value>Proteins</value>
-  </data>
-  <data name="SuccessfullAdd" xml:space="preserve">
-    <value>Product successfull added!</value>
-  </data>
-  <data name="Unknown_comand" xml:space="preserve">
-    <value>Unknown command, please enter correct comand.</value>
-  </data>
-  <data name="UserNotFound" xml:space="preserve">
-    <value>User not found.</value>
-  </data>
-  <data name="Weigth_of_portion" xml:space="preserve">
-    <value>Enter weigth of portion</value>
+  <data name="DefaultSchema" xml:space="preserve">
+    <value>dbo</value>
   </data>
 </root>

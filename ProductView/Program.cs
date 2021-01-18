@@ -60,6 +60,7 @@ namespace ProductView
             Console.WriteLine(resManager.GetString("ChoseAction", Culture));
             Console.WriteLine(resManager.GetString("add_eating", Culture));
             Console.WriteLine(resManager.GetString("AddExcersise", Culture));
+            Console.WriteLine(resManager.GetString("Exit", Culture));
             var input = Console.ReadLine();
             while(true)
             if (input == "/add")
@@ -74,15 +75,16 @@ namespace ProductView
                 else
                 {
                         Console.WriteLine(resManager.GetString("ProductNotFound", Culture));
-                        var fats = ParseDouble(resManager.GetString("Fats", Culture));
-                        var proteins = ParseDouble(resManager.GetString("Proteins", Culture));
-                        var hydrates = ParseDouble(resManager.GetString("Carbo_hydrates", Culture));
-                        var calories = ParseDouble(resManager.GetString("Calories", Culture));
+                        double fats = ParseDouble(resManager.GetString("Fats", Culture));
+                        double proteins = ParseDouble(resManager.GetString("Proteins", Culture));
+                        double hydrates = ParseDouble(resManager.GetString("Carbo_hydrates", Culture));
+                        double calories = ParseDouble(resManager.GetString("Calories", Culture));
+
                         product.food.Fats = fats;
                         product.food.Proteins = proteins;
                         product.food.CarboHydrates = hydrates;
                         product.food.Callories = calories;
-
+                        
                         eatingControl.EatingAdd(product.food, product.weight);
                         Console.WriteLine(resManager.GetString("SuccessfullAdd", Culture));
                 }
@@ -94,6 +96,12 @@ namespace ProductView
                 excersiseControl.ExcerciseAdd(activity.activity, activity.begin, activity.end);
                     break;
             }
+            else if(input == "/exit")
+                {
+                    Environment.Exit(0);
+                    break;
+                    
+                }
             else
             {
                 Console.WriteLine(resManager.GetString("Unknown_comand", Culture)); 
@@ -102,8 +110,8 @@ namespace ProductView
 
             (Food food, double weight) EatingAdd()
             {
-                Console.WriteLine(resManager.GetString("Enter product name", Culture));
-                var name = Console.ReadLine();
+                Console.WriteLine(resManager.GetString("Enter_product_name", Culture));
+                string name = Console.ReadLine();
                 double weight = ParseDouble(resManager.GetString("Weigth_of_portion", Culture));
                 Food food = new Food(name);
                 return (food, weight);

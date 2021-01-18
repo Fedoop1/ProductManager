@@ -13,7 +13,6 @@ namespace ProductView.IOController
     [Serializable]
     public class IOUserControl : BaseSerialize
     {
-        private const string PATH ="UserData.dat";
 
         public User CurrentUser;
 
@@ -58,9 +57,9 @@ namespace ProductView.IOController
             }
             if (ch == 1)
             {
-                gender = User.Female;
+                gender = User.Male;
             }
-            else gender = User.Male;
+            else gender = User.Female;
             var user = new User(name, nick, birth, weigth, gender);
             SaveUserData();
             return user;
@@ -76,11 +75,11 @@ namespace ProductView.IOController
 
         public void SaveUserData()
         {
-            SaveData(PATH, UserList);
+            Save(UserList);
         }
         public List<User> LoadUserData()
         {
-            return LoadData<List<User>>(PATH) ?? new List<User>();
+            return Load<User>() ?? new List<User>();
         }
     
     }

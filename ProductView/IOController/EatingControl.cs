@@ -14,30 +14,28 @@ namespace ProductView.IOController
         public Eating UserEating { get; }
         public List<Food> UserFoodList { get; }
 
-        private const string EATING_PATH = "EatingData.dat";
-        private const string FOODLIST_PATH = "FoodList.dat";
-
         public EatingControl(User user)
         {
             CurrentUser = user ?? throw new ArgumentNullException("User cant be Null");
             UserEating = LoadEating();
             UserFoodList = LoadFoodList();
+            SaveData();
         }
 
         private Eating LoadEating()
         {
-            return LoadData<Eating>(EATING_PATH) ?? new Eating(CurrentUser);
+            return Load<Eating>().FirstOrDefault() ?? new Eating(CurrentUser);
         }
 
         private List<Food> LoadFoodList()
         {
-            return LoadData<List<Food>>(FOODLIST_PATH) ?? new List<Food>();
+            return Load<Food>() ?? new List<Food>();
         }
 
         private void SaveData()
         {
-            SaveData(EATING_PATH, UserEating);
-            SaveData(FOODLIST_PATH, UserFoodList);
+            Save(new List<Eating>() { UserEating });
+            Save(UserFoodList);
         }
 
         public void EatingAdd(Food food, double weight)
@@ -62,6 +60,7 @@ namespace ProductView.IOController
             {
                 Console.WriteLine();
                 Console.WriteLine(items);
+                Console.WriteLine("Грамм: " + UserEating.FoodList.SingleOrDefault(x=> x.Key.Name == items.Name).Value);
             }
         }
     }

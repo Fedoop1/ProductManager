@@ -9,6 +9,8 @@ namespace ProductView.Model
     [Serializable]
     public class User
     {
+        public User() { }
+        public int Id { get; set; }
         
         public static Gender Male = new Gender("Male");
         public static Gender Female = new Gender("Female");
@@ -18,6 +20,9 @@ namespace ProductView.Model
         private DateTime _birthdate { get; }
         private double _weigth { get; }
         private Gender _gender { get; }
+
+        public virtual ICollection<Eating> Eatings { get; set; }
+        public virtual ICollection<Excercise> Exercises { get; set; }
 
         public User(string name) : this(name: name, nick: "null", birth: DateTime.Parse("01.01.2001"), weigth: 999, gender: User.Male)
         {

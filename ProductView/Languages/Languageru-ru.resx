@@ -147,6 +147,9 @@
   <data name="Enter_product_name" xml:space="preserve">
     <value>Введите название продукта:</value>
   </data>
+  <data name="Exit" xml:space="preserve">
+    <value>/exit чтобы завершить программу.</value>
+  </data>
   <data name="Fats" xml:space="preserve">
     <value>Жиры</value>
   </data>

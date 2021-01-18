@@ -70,6 +70,15 @@ namespace ProductView.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на /act to add new Excercise.
+        /// </summary>
+        internal static string AddExcersise {
+            get {
+                return ResourceManager.GetString("AddExcersise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Press any key to continue....
         /// </summary>
         internal static string Any_key_to_cont {
@@ -138,6 +147,15 @@ namespace ProductView.Languages {
         internal static string Enter_product_name {
             get {
                 return ResourceManager.GetString("Enter_product_name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на /exit to close app..
+        /// </summary>
+        internal static string Exit {
+            get {
+                return ResourceManager.GetString("Exit", resourceCulture);
             }
         }
         

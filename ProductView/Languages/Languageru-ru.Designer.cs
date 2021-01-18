@@ -151,6 +151,15 @@ namespace ProductView.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на /exit чтобы завершить программу..
+        /// </summary>
+        internal static string Exit {
+            get {
+                return ResourceManager.GetString("Exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Жиры.
         /// </summary>
         internal static string Fats {

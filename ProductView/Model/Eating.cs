@@ -9,11 +9,15 @@ namespace ProductView.Model
     [Serializable]
     public class Eating
     {
-        public DateTime Moment { get; } = DateTime.UtcNow;
+        public DateTime Moment { get; set; } = DateTime.UtcNow;
 
-        public Dictionary<Food, double> FoodList { get; }
+        public Dictionary<Food, double> FoodList { get; set; }
 
-        public User CurrUser { get; }
+        public virtual User CurrUser { get; set; }
+
+        public int UserId { get; set; }
+        public int Id { get; set; }
+
 
         public Eating(User user)
         {
@@ -22,9 +26,11 @@ namespace ProductView.Model
             FoodList = new Dictionary<Food, double>();
         }
 
+        public Eating() { }
+
         public void AddFoodList(Food product, double Weight)
         {
-            var check = FoodList.Keys.SingleOrDefault(pr => pr.Name == product.Name);
+            var check = FoodList.Keys.FirstOrDefault(pr => pr.Name.Equals(product.Name));
             if(check == null)
             {
                 FoodList.Add(product, Weight);

@@ -14,10 +14,6 @@ namespace ProductView.IOController
         private List<Excercise> ExcerciseList { get; }
         private User CurrUser { get; }
 
-        private const string ACTIVITY_PATH = "activity.dat";
-
-        private const string EXCERSISE_PATH = "excersise.dat";
-
         public ExcersiseControl(User user)
         {
             CurrUser = user ?? throw new Exception("Null User!");
@@ -27,18 +23,18 @@ namespace ProductView.IOController
 
         private List<Activity> LoadActivity()
         {
-            return LoadData<List<Activity>>(ACTIVITY_PATH) ?? new List<Activity>(); 
+            return Load<Activity>() ?? new List<Activity>(); 
         }
 
         private List<Excercise> LoadExcercise()
         {
-            return LoadData<List<Excercise>>(EXCERSISE_PATH) ?? new List<Excercise>();
+            return Load<Excercise>() ?? new List<Excercise>();
         }
 
         private void SaveData()
         {
-            SaveData(ACTIVITY_PATH, ActivitiList);
-            SaveData(EXCERSISE_PATH, ExcerciseList);
+            Save(ActivitiList);
+            Save(ExcerciseList);
         }
 
         public void ExcerciseAdd(Activity act, DateTime begin, DateTime end)
