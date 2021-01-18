@@ -22,18 +22,12 @@
         "Entry"
         {
         "MsmKey" = "8:_32931285183C5BF0943F13D2BBAFF989"
-        "OwnerKey" = "8:_80C0F0DE02664961A953509A02AF4F6C"
+        "OwnerKey" = "8:_76F35DF539D649DC9B8D6D594EC3C2C6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_32931285183C5BF0943F13D2BBAFF989"
-        "OwnerKey" = "8:_76F35DF539D649DC9B8D6D594EC3C2C6"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_5B0F8423FB217FEB30090253DA71DF7C"
         "OwnerKey" = "8:_80C0F0DE02664961A953509A02AF4F6C"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -41,6 +35,12 @@
         {
         "MsmKey" = "8:_5B0F8423FB217FEB30090253DA71DF7C"
         "OwnerKey" = "8:_76F35DF539D649DC9B8D6D594EC3C2C6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5B0F8423FB217FEB30090253DA71DF7C"
+        "OwnerKey" = "8:_80C0F0DE02664961A953509A02AF4F6C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -52,18 +52,12 @@
         "Entry"
         {
         "MsmKey" = "8:_638F9314F36F78D3CACB7403DF25C92D"
-        "OwnerKey" = "8:_80C0F0DE02664961A953509A02AF4F6C"
+        "OwnerKey" = "8:_76F35DF539D649DC9B8D6D594EC3C2C6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_638F9314F36F78D3CACB7403DF25C92D"
-        "OwnerKey" = "8:_76F35DF539D649DC9B8D6D594EC3C2C6"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_65868A6AFDB0A72C34E9369DB16BA43F"
         "OwnerKey" = "8:_80C0F0DE02664961A953509A02AF4F6C"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -71,6 +65,12 @@
         {
         "MsmKey" = "8:_65868A6AFDB0A72C34E9369DB16BA43F"
         "OwnerKey" = "8:_76F35DF539D649DC9B8D6D594EC3C2C6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_65868A6AFDB0A72C34E9369DB16BA43F"
+        "OwnerKey" = "8:_80C0F0DE02664961A953509A02AF4F6C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -88,31 +88,25 @@
         "Entry"
         {
         "MsmKey" = "8:_F8777D0E43A2579013F5BDE4C983E535"
-        "OwnerKey" = "8:_80C0F0DE02664961A953509A02AF4F6C"
+        "OwnerKey" = "8:_76F35DF539D649DC9B8D6D594EC3C2C6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_F8777D0E43A2579013F5BDE4C983E535"
-        "OwnerKey" = "8:_76F35DF539D649DC9B8D6D594EC3C2C6"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_638F9314F36F78D3CACB7403DF25C92D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_76F35DF539D649DC9B8D6D594EC3C2C6"
+        "OwnerKey" = "8:_80C0F0DE02664961A953509A02AF4F6C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_80C0F0DE02664961A953509A02AF4F6C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_76F35DF539D649DC9B8D6D594EC3C2C6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -139,6 +133,12 @@
         "OwnerKey" = "8:_5B0F8423FB217FEB30090253DA71DF7C"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_638F9314F36F78D3CACB7403DF25C92D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -157,6 +157,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -173,6 +181,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -398,7 +422,7 @@
             {
             "DefaultLocation" = "8:[ProgramFilesFolder][Manufacturer]\\[ProductName]"
             "Name" = "8:#1925"
-            "AlwaysCreate" = "11:FALSE"
+            "AlwaysCreate" = "11:TRUE"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Property" = "8:TARGETDIR"
@@ -432,9 +456,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:Product Manager Setup"
+        "ProductName" = "8:Product Manager"
         "ProductCode" = "8:{81C996EF-78E2-4FB5-884A-8C5C5F305336}"
-        "PackageCode" = "8:{7C59791A-BAAB-450E-8E74-EA1491CA98E2}"
+        "PackageCode" = "8:{2097E547-A22A-4035-9619-B2126C6B0288}"
         "UpgradeCode" = "8:{0FEB6BA9-0872-4A05-8330-E0DAF916F88A}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -562,9 +586,9 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_054A0E6541774933BA10F958698DF882"
+            "Target" = "8:_080FC02E16CC4F26A6FF09B417FD57F1"
             "Folder" = "8:_054A0E6541774933BA10F958698DF882"
-            "WorkingFolder" = "8:_054A0E6541774933BA10F958698DF882"
+            "WorkingFolder" = "8:_080FC02E16CC4F26A6FF09B417FD57F1"
             "Icon" = "8:_313BDB0D70B94E729A316E356C0DF7B6"
             "Feature" = "8:"
             }

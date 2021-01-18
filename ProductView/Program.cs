@@ -57,13 +57,17 @@ namespace ProductView
             Console.WriteLine(ioUserControl.CurrentUser);
             Console.WriteLine(resManager.GetString("Any_key_to_cont", Culture));
             Console.ReadKey();
-            Console.WriteLine(resManager.GetString("ChoseAction", Culture));
-            Console.WriteLine(resManager.GetString("add_eating", Culture));
-            Console.WriteLine(resManager.GetString("AddExcersise", Culture));
-            Console.WriteLine(resManager.GetString("Exit", Culture));
-            var input = Console.ReadLine();
-            while(true)
-            if (input == "/add")
+            
+            void SelectCommand()
+            {
+                Console.WriteLine();
+                Console.WriteLine(resManager.GetString("ChoseAction", Culture));
+                Console.WriteLine(resManager.GetString("add_eating", Culture));
+                Console.WriteLine(resManager.GetString("AddExcersise", Culture));
+                Console.WriteLine(resManager.GetString("Exit", Culture));
+                var input = Console.ReadLine();
+                while (true)
+                if (input == "/add")
             {
                 var product = EatingAdd();
                 var checkproduct = eatingControl.UserFoodList.SingleOrDefault(x => x.Name == product.food.Name);
@@ -88,13 +92,15 @@ namespace ProductView
                         eatingControl.EatingAdd(product.food, product.weight);
                         Console.WriteLine(resManager.GetString("SuccessfullAdd", Culture));
                 }
+                SelectCommand();
                 break;
             }
             else if(input == "/act")
             {
                 var activity = ActivityAdd();
                 excersiseControl.ExcerciseAdd(activity.activity, activity.begin, activity.end);
-                    break;
+                SelectCommand();
+                break;
             }
             else if(input == "/exit")
                 {
@@ -106,8 +112,9 @@ namespace ProductView
             {
                 Console.WriteLine(resManager.GetString("Unknown_comand", Culture)); 
                 input = Console.ReadLine();
-            }
-
+            }   
+            }  //Method to select the command
+            SelectCommand();
             (Food food, double weight) EatingAdd()
             {
                 Console.WriteLine(resManager.GetString("Enter_product_name", Culture));
